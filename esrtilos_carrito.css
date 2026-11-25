@@ -1,0 +1,150 @@
+/* ==========================================================================
+   ESTILOS PARA EL CARRITO DE COMPRAS Y PAYPAL
+   ========================================================================== */
+.cart-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.cart-table-container {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.cart-table th {
+    background-color: #151515;
+    padding: 15px;
+    color: var(--accent-gold);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cart-table td {
+    padding: 20px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.95rem;
+}
+
+.cart-summary-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--accent-gold);
+    padding: 30px;
+    border-radius: 4px;
+}
+
+.cart-summary-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--accent-gold);
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.total-line {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.btn-remove {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: var(--transition);
+}
+
+.btn-remove:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 992px) {
+    .cart-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos para las acciones del carrito dentro de cada tarjeta de servicio */
+.service-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.btn-add-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid var(--accent-gold);
+    background-color: var(--accent-gold);
+    color: #000;
+    border-radius: 3px;
+    transition: var(--transition);
+}
+
+.btn-add-cart:hover {
+    background-color: transparent;
+    color: var(--accent-gold);
+}
+
+/* Notificación flotante (Toast) al agregar un servicio */
+.cart-toast {
+    position: fixed;
+    bottom: -100px;
+    right: 30px;
+    background-color: #1E1E1E;
+    border: 1px solid var(--accent-gold);
+    color: var(--text-primary);
+    padding: 15px 25px;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+    transition: all 0.4s ease;
+}
+
+.cart-toast.show {
+    bottom: 30px;
+}
+
+.cart-toast i {
+    color: var(--accent-gold);
+    font-size: 1.2rem;
+}
+
+.cart-toast a {
+    color: var(--accent-gold);
+    text-decoration: underline;
+    font-weight: 600;
+    margin-left: 10px;
+}

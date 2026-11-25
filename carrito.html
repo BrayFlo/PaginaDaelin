@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras | Photo by Mara</title>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="estilos.css">
+    <!-- SDK de PayPal (Usa la clave Sandbox de prueba 'sb') -->
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=MXN"></script>
+</head>
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-mark">
+                    <svg viewBox="0 0 100 100" class="logo-svg">
+                        <circle cx="50" cy="50" r="45" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                        <circle cx="50" cy="50" r="38" fill="none" stroke="#D4AF37" stroke-width="1" stroke-dasharray="4,4"/>
+                        <path d="M 35,35 L 40,25 L 60,25 L 65,35 Z" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                        <rect x="25" y="35" width="50" height="35" rx="5" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                        <circle cx="50" cy="52" r="12" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                        <circle cx="50" cy="52" r="5" fill="#D4AF37"/>
+                    </svg>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">PHOTO BY MARA</span>
+                    <span class="brand-tagline">STUDIO & DESIGN</span>
+                </div>
+            </a>
+            
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <a href="index.html#servicios" class="btn btn-outline" style="padding: 8px 18px; font-size: 0.8rem;">
+                    <i class="fas fa-arrow-left"></i> Seguir Explorando
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- DETALLE DEL CARRITO -->
+    <section class="section" style="padding-top: 140px; min-height: 80vh;">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-heading">Seminario de Comercio Electrónico</span>
+                <h1 class="section-title">Tu Carrito de Servicios</h1>
+                <div class="divider"></div>
+            </div>
+
+            <div class="cart-wrapper">
+                <!-- Tabla de Contenido del Carrito -->
+                <div class="cart-table-container">
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th>Servicio</th>
+                                <th>Precio Unitario</th>
+                                <th>Cantidad</th>
+                                <th>Subtotal</th>
+                                <th style="text-align: center;">Eliminar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-items-container">
+                            <!-- Inyectado dinámicamente mediante JS -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Resumen de Cuenta y Pago PayPal -->
+                <div class="cart-summary-card">
+                    <h3>Resumen de Pago</h3>
+                    <div class="summary-line">
+                        <span>Subtotal:</span>
+                        <span id="cart-subtotal">$0.00 MXN</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>IVA (16%):</span>
+                        <span id="cart-tax">$0.00 MXN</span>
+                    </div>
+                    <div class="divider" style="margin: 15px 0;"></div>
+                    <div class="summary-line total-line">
+                        <span>Total a Pagar:</span>
+                        <span id="cart-total">$0.00 MXN</span>
+                    </div>
+
+                    <!-- Contenedor del Botón Interactivo de PayPal -->
+                    <div id="paypal-button-container" style="margin-top: 25px;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p> 2026 PHOTO BY MARA. Yaretzi Daelin Mavillard Chavez - Lic. en Administración.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

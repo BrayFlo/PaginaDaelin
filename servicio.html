@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio | Photo by Mara</title>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Hojas de Estilos -->
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="servicio_styles.css">
+</head>
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <div class="logo-mark">
+                    <svg viewBox="0 0 100 100" class="logo-svg">
+                        <circle cx="50" cy="50" r="45" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                        <circle cx="50" cy="50" r="38" fill="none" stroke="#D4AF37" stroke-width="1" stroke-dasharray="4,4"/>
+                        <path d="M 35,35 L 40,25 L 60,25 L 65,35 Z" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                        <rect x="25" y="35" width="50" height="35" rx="5" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                        <circle cx="50" cy="52" r="12" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                        <circle cx="50" cy="52" r="5" fill="#D4AF37"/>
+                    </svg>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">PHOTO BY MARA</span>
+                    <span class="brand-tagline">STUDIO & DESIGN</span>
+                </div>
+            </a>
+            
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <!-- Icono de Carrito en la Barra Superior -->
+                <a href="carrito.html" class="nav-cart-btn" aria-label="Ver Carrito de Compras">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </a>
+                <a href="index.html#servicios" class="btn btn-outline" style="padding: 8px 18px; font-size: 0.8rem;">Volver al Inicio</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER DEL SERVICIO -->
+    <section class="section service-detail-header">
+        <div class="container text-center">
+            <span class="sub-heading">Galería & Detalle</span>
+            <h1 class="section-title" id="service-title">Cargando Servicio...</h1>
+            <p class="hero-description" id="service-desc" style="max-width: 650px; margin: 15px auto 0;">Galería de fotografías ilustrativas producidas por nuestro estudio.</p>
+            <div class="divider"></div>
+
+            <!-- Botón de Contratar / Agregar al Carrito dentro de esta vista individual -->
+            <div style="margin-top: 30px;" id="service-action-container">
+                <!-- Inyectado dinámicamente por JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERÍA DE IMÁGENES ILUSTRATIVAS -->
+    <section class="section gallery-section" style="padding-top: 0;">
+        <div class="container">
+            <div class="gallery-grid" id="service-gallery">
+                <!-- Se poblará dinámicamente con JavaScript -->
+            </div>
+            
+            <div class="text-center" style="margin-top: 60px;">
+                <h3 style="margin-bottom: 20px;">¿Deseas una cotización personalizada o resolver dudas?</h3>
+                <a href="index.html#contacto" class="btn btn-outline">Contactar al Estudio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p> 2026 PHOTO BY MARA. Yaretzi Daelin Mavillard Chavez - Lic. en Administración.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
